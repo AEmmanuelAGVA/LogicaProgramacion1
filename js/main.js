@@ -5,5 +5,42 @@ const btnenviar = document.getElementById("btnEnviar");
 
 btnenviar.addEventListener("click", function(event){
     event.preventDefault();
-    console.log(numero1.value,numero2.value,numero3.value);
+    num1 = numero1.value;
+    num2 = numero2.value;
+    num3 = numero3.value;
+
+    if(num1 >= num2 && num1 >= num3){
+        mayor = num1;
+        if(num2 >= num3){
+            medio = num2;
+            menor = num3;
+        }else{
+            medio = num3;
+            menor = num2;
+        }
+        console.log("Mayor: "+mayor+" Medio: "+medio+" Menor: "+ menor);
+        console.log("Menor: "+menor+ " Medio: "+medio+" Mayor: "+mayor);
+    }else if (num2 >= num1 && num2 >= num3){
+        mayor = num2;
+        if(num1 >= num3){
+            medio = num1;
+            menor = num3;
+        }else{
+            medio = num3;
+            menor = num1;
+        }
+        console.log("Mayor: "+mayor+" Medio: "+medio+" Menor: "+ menor);
+        console.log("Menor: "+menor+ " Medio: "+medio+" Mayor: "+mayor);
+    }else if (num3 >= num1 && num3 >= num2){
+        mayor = num3;
+        if(num1 >= num2){
+            medio = num1;
+            menor = num2;
+        }else{
+            medio = num2;
+            menor = num1;
+        }
+        console.log("Mayor: "+mayor+" Medio: "+medio+" Menor: "+ menor);
+        console.log("Menor: "+menor+ " Medio: "+medio+" Mayor: "+mayor);
+    }    
 })
