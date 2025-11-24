@@ -9,7 +9,10 @@ btnenviar.addEventListener("click", function(event){
     num2 = numero2.value;
     num3 = numero3.value;
 
-    if(num1 >= num2 && num1 >= num3){
+    if(num1 == num2 && num1 == num3){
+        console.log("Todos los numeros son iguales");
+    
+    }else if(num1 >= num2 && num1 >= num3){
         mayor = num1;
         if(num2 >= num3){
             medio = num2;
